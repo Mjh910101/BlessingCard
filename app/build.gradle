@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.blessing.card"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 102
+        versionName "1.0.2"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android {
+        signingConfigs {
+            debug {
+                storeFile file("/Users/Hua/Documents/android.keystore")
+                storePassword "ma13531760692hua"
+                keyAlias "android.keystore"
+                keyPassword "ma13531760692hua"
+            }
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile files('libs/MobLogCollector.jar')
+    compile files('libs/MobTools.jar')
+    compile files('libs/ShareSDK-Core-2.6.3.jar')
+    compile files('libs/ShareSDK-QQ-2.6.3.jar')
+    compile files('libs/ShareSDK-SinaWeibo-2.6.3.jar')
+    compile files('libs/ShareSDK-Wechat-2.6.3.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.6.3.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-2.6.3.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.6.3.jar')
+    compile files('libs/xUtils-2.6.14.jar')
+    compile files('libs/universal-image-loader-1.9.2-SNAPSHOT-with-sources.jar')
+    compile files('libs/ShareSDK-QZone-2.6.3.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/user_profile_mtj_1.2.jar')
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <EditText
+                    android:id="@+id/register_userInput"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/user_input_type"
+                    android:hint="帐号名"
+                    android:textSize="17dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="15dp" />
+
+                <EditText
+                    android:id="@+id/register_passInput"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/user_input_type"
+                    android:hint="密码"
+                    android:inputType="textVisiblePassword"
+                    android:textSize="17dp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="15dp" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/user_input_type">
+
+                    <ImageView
+                        android:id="@+id/register_repeatPassInputIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/input_false_icon"
+                        android:visibility="invisible" />
+
+                    <EditText
+                        android:id="@+id/register_repeatPassInput"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/register_repeatPassInputIcon"
+                        android:background="@drawable/login_input_type"
+                        android:hint="请重复一次密码"
+                        android:inputType="textVisiblePassword"
+                        android:textSize="17dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="15dp" />
+
+                <TextView
+                    android:id="@+id/register_repeatPassInput_false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="两次密码输入不相符。请重新输入。"
+                    android:textColor="@color/text_red_01"
+                    android:textSize="17dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/register_registerBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/register_botton_type"
+                    android:gravity="center"
+                    android:text="注    册"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/register_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

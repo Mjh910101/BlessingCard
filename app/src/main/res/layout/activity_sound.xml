@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:id="@+id/sound_cardImage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/sound_soundIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/sound_off_icon" />
+
+        <Button
+            android:id="@+id/sound_soundBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/sound_soundIcon"
+            android:layout_alignLeft="@id/sound_soundIcon"
+            android:layout_alignRight="@id/sound_soundIcon"
+            android:layout_alignTop="@id/sound_soundIcon"
+            android:background="@color/lucency" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/sound_timeText"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@id/sound_soundIcon"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:background="@drawable/sound_amp_004"-->
+        <!--android:gravity="bottom|center_horizontal"-->
+        <!--android:padding="15dp"-->
+        <!--android:text="00:00"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="20dp" />-->
+
+        <RelativeLayout
+            android:id="@+id/sound_timeBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/sound_soundIcon"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/sound_timeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sound_amp_004" />
+
+            <Chronometer
+                android:id="@+id/sound_timedown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/sound_timeImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="05"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sound_playBox"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="@color/lucency" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="13"
+                    android:background="@color/main_bg">
+
+                    <TextView
+                        android:id="@+id/sound_againIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:drawableLeft="@drawable/again_icon"
+                        android:gravity="center"
+                        android:text="重新录音"
+                        android:textColor="@color/white"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:id="@+id/sound_soundName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="60dp"
+                        android:gravity="center"
+                        android:text="Name"
+                        android:textColor="@color/white"
+                        android:textSize="17dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/sound_playIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/play_icon" />
+
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/sound_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <include layout="@layout/layout_repeat_title" />
+
+    </RelativeLayout>
+
+</LinearLayout>

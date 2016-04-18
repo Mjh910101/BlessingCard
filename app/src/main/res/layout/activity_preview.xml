@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/preview_caraImageBox"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/preview_caraImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/preview_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="12dp"
+                        android:layout_alignBottom="@id/preview_caraImageBox" />
+
+                    <RelativeLayout
+                        android:id="@+id/preview_playBox"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignTop="@id/preview_view">
+
+                        <ImageView
+                            android:id="@+id/preview_playIcon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="12dp"
+                            android:src="@drawable/play_lucency_icon" />
+
+                        <TextView
+                            android:id="@+id/preview_soundTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/preview_playIcon"
+                            android:layout_alignTop="@id/preview_playIcon"
+                            android:layout_toRightOf="@id/preview_playIcon"
+                            android:gravity="center"
+                            android:text="00:00"
+                            android:textColor="@color/text_grat_01"
+                            android:textSize="17dp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/preview_messageText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Message"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+                <RelativeLayout
+                    android:id="@+id/preview_postmarkBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp">
+
+                        <ImageView
+                            android:id="@+id/preview_userPic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/uset_pic_bg"
+                            android:padding="12dp"
+                            android:src="@drawable/user_pig_icon" />
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/preview_postmark"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scaleType="fitXY" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/preview_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="58dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_bg"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/preview_backMainBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/gray_btn_type"
+                            android:drawableLeft="@drawable/back_main_icon"
+                            android:text="贺卡首页"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/preview_sendBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/orange_btn_type"
+                            android:text="发  送"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/preview_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+
+        <include layout="@layout/layout_repeat_title" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

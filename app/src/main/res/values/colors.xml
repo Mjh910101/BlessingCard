@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="page_back">#fff2f2f2</color>
+    <color name="logo_text_color">#ff7f7f7f</color>
+    <color name="white">#ffffffff</color>
+    <color name="lucency">#00ffffff</color>
+    <color name="black">#000000</color>
+    <color name="login_with_other_plat_text_color">#ff383838</color>
+
+    <color name="main_bg">#ff5500</color>
+    <color name="activity_bg">#E3E3E3</color>
+    <color name="gray_bg">#eaeaea</color>
+    <color name="text_grat_01">#a3a2a2</color>
+    <color name="text_orange_01">#ffa300</color>
+    <color name="text_red_01">#e54a0f</color>
+    <color name="line_gray_001">#e8e8e8</color>
+    <color name="black_lucency">#50000000</color>
+    <color name="text_black_01">#51514e</color>
+    <color name="text_gray_02">#505050</color>
+    <color name="title_bg">#ff5500</color>
+
+</resources>
