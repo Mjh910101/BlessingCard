@@ -134,12 +134,14 @@ public class PostmarkListBaseAdpter extends BaseAdapter {
 
     public void setPostmarkImage(ImageView view, int position, double width, double height) {
         PoststampObj obj = itemList.get(position);
+        int p = 15;
         double h = height / 184d * 160d;
-        double w = h / (double)obj.getThumbnails_height() * (double)obj.getThumbnails_wdith();
+        double w = h / (double) obj.getThumbnails_height() * (double) obj.getThumbnails_wdith();
 //        double w = WinTool.getWinWidth(context);
 //        double h = w / 640d * 184d;
-//        view.setLayoutParams(new LinearLayout.LayoutParams((int)w, (int) h));
-        view.setScaleType(ImageView.ScaleType.FIT_START);
+        view.setLayoutParams(new LinearLayout.LayoutParams((int) h, (int) h));
+        view.setPadding(p, p, p, p);
+        view.setScaleType(ImageView.ScaleType.FIT_CENTER);
         DownloadImageLoader.loadImage(view, obj.getThumbnails_url());
     }
 

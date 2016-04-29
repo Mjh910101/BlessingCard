@@ -95,6 +95,9 @@
         <activity
             android:name=".activity.AboutActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ImageActivity"
+            android:screenOrientation="portrait" />
         <!-- 服务 -->
         <service android:name=".download.DownloadNewAppService" />
 

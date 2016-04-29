@@ -48,4 +48,5 @@ dependencies {
     compile files('libs/ShareSDK-QZone-2.6.3.jar')
     compile files('libs/BaiduLBS_Android.jar')
     compile files('libs/user_profile_mtj_1.2.jar')
+    compile files('libs/library-1.2.2.jar')
 }

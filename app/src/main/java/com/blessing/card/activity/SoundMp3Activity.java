@@ -139,7 +139,8 @@ public class SoundMp3Activity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.title_backIcon, R.id.sound_playIcon, R.id.sound_againIcon, R.id.title_nextIcon})
+    @OnClick({R.id.title_backIcon, R.id.sound_playIcon, R.id.sound_againIcon
+            , R.id.title_nextIcon, R.id.sound_cardImage})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.title_backIcon:
@@ -158,7 +159,14 @@ public class SoundMp3Activity extends BaseActivity {
             case R.id.title_nextIcon:
                 jumpInputMessageActivity();
                 break;
+            case R.id.sound_cardImage:
+                jumpImageActivity();
+                break;
         }
+    }
+
+    private void jumpImageActivity() {
+        Passageway.jumpActivity(context, ImageActivity.class, mBundle);
     }
 
     private void stopSound() {
@@ -257,8 +265,8 @@ public class SoundMp3Activity extends BaseActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 try {
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                        if(Utils.isFastClick()){
-                            MessageHandler.showToast(context,"点击太快");
+                        if (Utils.isFastClick()) {
+                            MessageHandler.showToast(context, "点击太快");
                             return true;
                         }
                         Log.e("", "ACTION_DOWN+ACTION_DOWN+ACTION_DOWN+ACTION_DOWN+ACTION_DOWN+ACTION_DOWN");
@@ -427,9 +435,10 @@ public class SoundMp3Activity extends BaseActivity {
 
     static class Utils {
         private static long lastClickTime;
+
         public synchronized static boolean isFastClick() {
             long time = System.currentTimeMillis();
-            if ( time - lastClickTime < 300) {
+            if (time - lastClickTime < 300) {
                 return true;
             }
             lastClickTime = time;
