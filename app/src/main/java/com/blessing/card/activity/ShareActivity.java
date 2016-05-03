@@ -64,12 +64,12 @@ public class ShareActivity extends BaseActivity {
     public final static String TITIE_TEXT = "祝你-不一样的祝福选择";
     public final static String CONTENT_TEXT = "我在@祝你 挑了张明信片送给你，希望你会喜欢！";
 
-    @ViewInject(R.id.title_userIcon)
-    private ImageView userIcon;
-    @ViewInject(R.id.title_seekText)
-    private TextView seekText;
-    @ViewInject(R.id.title_titleName)
-    private TextView titleName;
+//    @ViewInject(R.id.title_userIcon)
+//    private ImageView userIcon;
+//    @ViewInject(R.id.title_seekText)
+//    private TextView seekText;
+//    @ViewInject(R.id.title_titleName)
+//    private TextView titleName;
     @ViewInject(R.id.share_dataGrid)
     private GridView dataGrid;
     @ViewInject(R.id.share_progress)
@@ -106,11 +106,11 @@ public class ShareActivity extends BaseActivity {
     }
 
     private void initActivity() {
-        userIcon.setVisibility(View.GONE);
-        seekText.setVisibility(View.GONE);
-        titleName.setVisibility(View.VISIBLE);
+//        userIcon.setVisibility(View.GONE);
+//        seekText.setVisibility(View.GONE);
+//        titleName.setVisibility(View.VISIBLE);
 
-        titleName.setText("发送明信片");
+//        titleName.setText("发送明信片");
 
         Bundle b = getIntent().getExtras();
         if (b != null) {

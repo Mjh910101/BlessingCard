@@ -87,7 +87,8 @@
             android:windowSoftInputMode="stateHidden|stateUnchanged" />
         <activity
             android:name=".activity.ShareActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
         <activity
             android:name=".activity.VersionActivity"
             android:screenOrientation="portrait"
