@@ -5,6 +5,7 @@
     <color name="white">#ffffffff</color>
     <color name="lucency">#00ffffff</color>
     <color name="black">#000000</color>
+    <color name="lucency_black">#66000000</color>
     <color name="login_with_other_plat_text_color">#ff383838</color>
 
     <color name="main_bg">#ff5500</color>
